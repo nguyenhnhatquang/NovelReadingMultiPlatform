@@ -36,7 +36,7 @@ namespace NovelReading.Sources.ViewModels
         {
             if (await _authService.LoginAsync(AuthDataModel))
             {
-                await Application.Current.MainPage.DisplayAlert("Alert", "Login Success", "OK");
+                await Shell.Current.GoToAsync($"//{nameof(MainPage)}");
             }
             else
             {

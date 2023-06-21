@@ -2,25 +2,11 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
-
 	public MainPage()
 	{
-		InitializeComponent();
-	}
+        InitializeComponent();
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
-
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-        Preferences.Default.Set<bool>("AuthState", false);
-
-        SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        MediaElementAudio.Source = "https://c3-ex-swe.nixcdn.com/NhacCuaTui2040/MuaThangSau-VanMaiHuongGREYDTrungQuanIdol-9534954.mp3?st=M0D6REK5fda0sq_k31WeVw&e=1687934540&t=1687333494952";
+    }
 }
 
