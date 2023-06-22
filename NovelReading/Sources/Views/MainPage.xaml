@@ -1,14 +1,74 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="NovelReading.MainPage">
 
-    <ScrollView>
-        <toolkit:MediaElement 
-            x:Name="MediaElementAudio"
-            Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            ShouldShowPlaybackControls="True" />
-    </ScrollView>
+    <VerticalStackLayout>
+        <Label x:Name="Label"/>
+        <ProgressBar x:Name="MyProgress" Progress="0" />
+        <StackLayout WidthRequest="0" HeightRequest="0" >
+            <toolkit:MediaElement
+                x:Name="MediaElementAudio"
+                Source="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                PositionChanged="MediaElementAudio_OnPositionChanged"
+                ShouldShowPlaybackControls="True" 
+                MediaHeight="0"
+                MediaWidth="0" />
+        </StackLayout>
+        <HorizontalStackLayout>
+            <Button 
+                Text="Back 10s"
+                WidthRequest="100"
+                Clicked="ButtonBack_OnClicked"/>
+            <Button 
+                Text="Start"
+                WidthRequest="100"
+                Clicked="ButtonStart_OnClicked"/>
+            <Button 
+                Text="Pause"
+                WidthRequest="100"
+                Clicked="ButtonPause_OnClicked"/>
+            <Button 
+                Text="Next 10s"
+                WidthRequest="100"
+                Clicked="ButtonNext_OnClicked"/>
+        </HorizontalStackLayout>
 
+<!--         <Picker x:Name="Languages" /> -->
+<!--         <Slider x:Name="Volume" Maximum="10" /> -->
+<!--         <Slider x:Name="Pitch" Maximum="20" /> -->
+<!--         <Entry  -->
+<!--             x:Name="TextToSpeak" -->
+<!--             Text="Chủ nhật, công viên sinh thái thành phố Cố Đô! -->
+<!-- Dương Bách Xuyên đứng trong chòi nghỉ mát thỉnh thoảng nhìn về phía xa xăm. -->
+<!-- -->
+<!-- Đêm qua người bạn gái mà anh không gặp trong nửa năm đã gọi điện hẹn anh buổi sáng ở công viên gặp mặt, chưa tới tám giờ thì anh đã tới rồi. -->
+<!-- Anh và bạn gái là mối tình chị em điển hình. -->
+<!-- -->
+<!-- Bạn gái của anh chính là đàn chị khóa trên, hiện tại đang làm thực tập sinh trong một doanh nghiệp có vốn đầu tư nước ngoài được nửa năm, còn Dương Bách Xuyên là sinh viên năm cuối. -->
+<!-- -->
+<!-- Một người còn đang học, người còn lại thì đã bươn trải ngoài xã hội, cả hai đều bận việc riêng, hơn nữa công ty của bạn gái là công ty có vốn đầu tư nước ngoài nên thường xuyên đi công tác, đã năm tháng rưỡi họ không gặp nhau. -->
+<!-- Công viên này là nơi hai người gặp gỡ lần đầu tiên, cũng là nơi hẹn hò đầu tiên. -->
+<!-- -->
+<!-- Giữa thành phố hối hả và nhộn nhịp thì nơi này là thánh địa trong trái tim họ. -->
+<!-- Mang tâm tình kích động, Dương Bách Xuyên nhìn trái nhìn phải, nhưng đợi hơn một tiếng đồng hồ vẫn không thấy bóng dáng bạn gái đâu. -->
+<!-- Trong lòng chán nản đủ thứ, anh đi dọc bờ hồ để xem có ai đến không. -->
+<!-- -->
+<!-- Vừa mới đi được mấy bước thì đột nhiên nghe thấy tiếng chó sủa. -->
+<!-- Quay đầu nhìn lại, có một con chó đang vật lộn sắp chết đuối trong hồ cách đó hàng chục mét. -->
+<!-- Khi anh đến gần mới phát hiện ra đó là một chú chó lông vàng, nguyên nhân khiến chú chó suýt chết đuối là do dây xích trên cổ quấn vào gốc cây ven hồ, bị mắc kẹt trong hồ đã lâu…" -->
+<!--             WidthRequest="250" -->
+<!--             Placeholder="Nhập để nói" -->
+<!--             Margin="0, 10, 0, 0" /> -->
+<!--         <Button  -->
+<!--             Text="Listen" -->
+<!--             Clicked="Button_OnClicked" -->
+<!--             WidthRequest="150" /> -->
+<!--         <Button -->
+<!--             Text="Stop" -->
+<!--             Clicked="ButtonStop_OnClicked" -->
+<!--             WidthRequest="150" /> -->
+    </VerticalStackLayout>
 </ContentPage>

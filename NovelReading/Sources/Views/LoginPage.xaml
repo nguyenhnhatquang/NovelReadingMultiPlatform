@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
+
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="NovelReading.Sources.Views.LoginPage">
-    <VerticalStackLayout 
+    <VerticalStackLayout
         HorizontalOptions="Center"
         VerticalOptions="Center">
-        <Label 
+        <Label
             Text="Login"
             FontSize="30"
-            VerticalOptions="Center" 
+            VerticalOptions="Center"
             HorizontalOptions="Center" />
-        <Entry 
-            x:Name="inputUserName"
+        <Entry
             Text="{Binding AuthDataModel.UserName}"
             WidthRequest="250"
             MaxLength="25"
-            Placeholder="Username" 
-            Margin="0, 10, 0, 0"/>
-        <Entry 
-            x:Name="inputPassword"
+            Placeholder="Username"
+            Margin="0, 10, 0, 0" />
+        <Entry
             Text="{Binding AuthDataModel.Password}"
             WidthRequest="250"
             MaxLength="16"
@@ -26,8 +25,7 @@
             Placeholder="Password" />
         
         <HorizontalStackLayout HorizontalOptions="End">
-            <Button 
-                x:Name="btnForgotPassWord"
+            <Button
                 Text="Forgot Password?"
                 BackgroundColor="Transparent"
                 Command="{Binding ForgotPasswordCommand}"
@@ -36,12 +34,9 @@
                 WidthRequest="150" />
         </HorizontalStackLayout>
         
-        <Button 
-                x:Name="btnLogin"
-                Text="Đăng nhập"
+        <Button Text="Đăng nhập"
                 Command="{Binding LoginCommand}"
                 WidthRequest="150" />
-
-
+        
     </VerticalStackLayout>
 </ContentPage>

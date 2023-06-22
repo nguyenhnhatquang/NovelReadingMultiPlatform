@@ -25,5 +25,4 @@
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage" />
     </TabBar>
-
 </Shell>
